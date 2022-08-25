@@ -5,19 +5,19 @@
 
 void ShowWeekends(int number)
 {
-    if ((number == 6) |  (number == 7))
+    if ((number == 6) | (number == 7))
     {
-        Console.WriteLine ("Это выходной");
+        Console.WriteLine("Это выходной");
     }
-    else if  ((number <= 0) | (number > 7))
+    else if ((number <= 0) | (number > 7))
     {
-        Console.WriteLine ("Это не день недели");
+        Console.WriteLine("Это не день недели");
     }
-    else 
+    else
     {
-        Console.WriteLine ("Это не выходной");
+        Console.WriteLine("Это не выходной");
     }
 }
-Console.WriteLine ("Введите число ");
+Console.WriteLine("Введите число ");
 int number = Convert.ToInt32(Console.ReadLine());
 ShowWeekends(number);

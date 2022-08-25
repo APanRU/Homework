@@ -3,34 +3,34 @@
 // 782 -> 8
 // 918 -> 1
 
-// Console.Write (" Введите трехзначное число ");
+// Console.Write(" Введите трехзначное число ");
 // string str = Console.ReadLine();
-// Console.Write (str[1]); 
+// Console.Write(str[1]);
 
 void ShowSecondNumber(int x)
 {
-    int y = x /10  % 10;
+    int y = x / 10 % 10;
     if (x >= 1000)
     {
         while (x >= 100) x = x / 10;
-        int z = x  % 10;  
-        Console.WriteLine ($"Вторая цифра числа {z}. Вы ввели не трехзначное число");
+        int z = x % 10;
+        Console.WriteLine($"Вторая цифра числа {z}. Вы ввели не трехзначное число");
     }
-    else if  (x >= 100)
+    else if (x >= 100)
     {
-        Console.WriteLine (y);
+        Console.WriteLine(y);
     }
-    else if  ((x >= 10) && (x < 100))
+    else if ((x >= 10) && (x < 100))
     {
-        int a = x  % 10;
-        Console.WriteLine ($"Вторая цифра числа {a}.  Вы ввели не трехзначное число!");
+        int a = x % 10;
+        Console.WriteLine($"Вторая цифра числа {a}.  Вы ввели не трехзначное число!");
     }
-    else    
+    else
     {
-        Console.WriteLine ("В числе нет второй цифры"); 
+        Console.WriteLine("В числе нет второй цифры");
     }
 }
 
-Console.WriteLine ("Введите число ");
+Console.WriteLine("Введите число ");
 int x = Convert.ToInt32(Console.ReadLine());
 ShowSecondNumber(x);
