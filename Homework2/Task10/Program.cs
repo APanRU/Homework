@@ -3,9 +3,9 @@
 // 782 -> 8
 // 918 -> 1
 
-// Console.Write(" Введите трехзначное число ");
-// string str = Console.ReadLine();
-// Console.Write(str[1]);
+Console.Write(" Введите трехзначное число ");
+string str = Console.ReadLine();
+Console.Write(str[1]);
 
 void ShowSecondNumber(int x)
 {
