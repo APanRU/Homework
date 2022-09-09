@@ -11,14 +11,14 @@ int Read(string line)
     return R;
 }
 
-double [,] FillingArray(double[,] outArray)
+double[,] FillingArray(double[,] outArray)
 {
     for (int i = 0; i < outArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < outArray.GetLength(1); j++)
         {
-            for (int j = 0; j < outArray.GetLength(1); j++)
-            {
-               outArray[i,j] = Convert.ToDouble(new Random().Next(-300, 300)) / 10; 
-            }
+            outArray[i, j] = Convert.ToDouble(new Random().Next(-300, 300)) / 10;
+        }
     }
     return outArray;
 }

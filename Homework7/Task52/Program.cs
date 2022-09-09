@@ -8,14 +8,14 @@
 
 int[,] numbers = new int[3, 4];
 
-int [,] FillingArray(int[,] outArray)
+int[,] FillingArray(int[,] outArray)
 {
     for (int i = 0; i < outArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < outArray.GetLength(1); j++)
         {
-            for (int j = 0; j < outArray.GetLength(1); j++)
-            {
-               outArray[i,j] = Convert.ToInt32(new Random().Next(1, 10)); 
-            }
+            outArray[i, j] = Convert.ToInt32(new Random().Next(1, 10));
+        }
     }
     return outArray;
 }
@@ -38,14 +38,14 @@ Print2DArray(numbers);
 Console.WriteLine();
 
 for (int j = 0; j < numbers.GetLength(1); j++)
-    {            
-        double arithmeticMean = 0;
-        for (int i = 0; i < numbers.GetLength(0); i++)
-        {
-            arithmeticMean = arithmeticMean + numbers[i,j];            
-        }
-       Console.WriteLine($"{ arithmeticMean / numbers.GetLength(0)} ");
-    } 
+{
+    double arithmeticMean = 0;
+    for (int i = 0; i < numbers.GetLength(0); i++)
+    {
+        arithmeticMean = arithmeticMean + numbers[i, j];
+    }
+    Console.WriteLine($"{arithmeticMean / numbers.GetLength(0)} ");
+}
 
 
 

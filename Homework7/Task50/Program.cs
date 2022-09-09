@@ -16,14 +16,14 @@ int Read(string line)
     return R;
 }
 
-int [,] FillingArray(int[,] outArray)
+int[,] FillingArray(int[,] outArray)
 {
     for (int i = 0; i < outArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < outArray.GetLength(1); j++)
         {
-            for (int j = 0; j < outArray.GetLength(1); j++)
-            {
-               outArray[i,j] = Convert.ToInt32(new Random().Next(0, 10)); 
-            }
+            outArray[i, j] = Convert.ToInt32(new Random().Next(0, 10));
+        }
     }
     return outArray;
 }
@@ -40,16 +40,16 @@ void Print2DArray(int[,] matr)
     }
 }
 
-string FindElement (int[,] matr, int n, int m)
+string FindElement(int[,] matr, int n, int m)
 {
     if (n > numbers.GetLength(0) || m > numbers.GetLength(1))
     {
-        return  "Такого элемента нет";
+        return "Такого элемента нет";
     }
-    
+
     else
     {
-        return  ($"На позиции:  индекс строки: {n}, индекс столбца: {m} - находится элемент со значением {numbers[n-1,m-1]}");
+        return ($"На позиции:  индекс строки: {n}, индекс столбца: {m} - находится элемент со значением {numbers[n - 1, m - 1]}");
     }
 }
 
@@ -57,5 +57,5 @@ string FindElement (int[,] matr, int n, int m)
 Console.WriteLine();
 FillingArray(numbers);
 Print2DArray(numbers);
-string result = FindElement(numbers,lines,columns);
+string result = FindElement(numbers, lines, columns);
 Console.WriteLine(result);
