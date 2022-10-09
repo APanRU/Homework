@@ -3,21 +3,21 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-void ShowThirdNumber()
-{
-    string str = Console.ReadLine();
-    int length = str.Length;
-    if (length < 3)
-    {
-        Console.WriteLine("В числе нет третьей цифры");
-    }
-    else
-    {
-        Console.WriteLine(str[2]);
-    }
-}
-Console.WriteLine("Введите число ");
-ShowThirdNumber();
+// void ShowThirdNumber()
+// {
+//     string str = Console.ReadLine();
+//     int length = str.Length;
+//     if (length < 3)
+//     {
+//         Console.WriteLine("В числе нет третьей цифры");
+//     }
+//     else
+//     {
+//         Console.WriteLine(str[2]);
+//     }
+// }
+// Console.WriteLine("Введите число ");
+// ShowThirdNumber();
 
 
 void ShowThirdNumber(int x)
